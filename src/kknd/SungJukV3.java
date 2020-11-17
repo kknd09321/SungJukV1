@@ -47,11 +47,19 @@ public class SungJukV3 {
             System.out.print("이름을 입력하세요 : ");
             name[i] = sc.nextLine();
             System.out.print("국어를 입력하세요 : ");
-            kor[i] = sc.nextInt();
+            kor[i] = Integer.parseInt(sc.nextLine());        /*<< sc.skip 을 안쓸꺼면 이걸 문자열로 받아야함*/
             System.out.print("영어를 입력하세요 : ");
-            eng[i] = sc.nextInt();
+            eng[i] = Integer.parseInt(sc.nextLine());
             System.out.print("수학를 입력하세요 : ");
-            mat[i] = sc.nextInt();
+            mat[i] = Integer.parseInt(sc.nextLine());
+
+            //sc.skip("\r\n|[\n\r]");  /*<< 얘네들을 스킵하겠다고 선언*/
+
+            //수학성적 입력시 같이 입력된 enter키가
+            //다음 데이터(이름) 입력시 입력값으로
+            //자동으로 전달됨
+            //nextLine 으로 문자열로 받아서 다음에 nextint로변환했지만 반복문으로 반복되면서 이름이 다시 나오면서 씹힘
+            //그러한 상황을 해결하기 위해 미리 엔터키를 제거하는 코드 삽입
         }
 
         for (int i = 0; i < 3; ++i){
