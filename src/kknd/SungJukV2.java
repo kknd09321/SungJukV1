@@ -76,32 +76,3 @@ public class SungJukV2 {
         System.out.println("학점 :" + grd);
     }
 }
-
-
-/*
-public class SungJukV1 {
-    public static void main(String[] args) {
-        int kor =99;
-        int eng=30;
-        int mat=60;
-        int sum=296;
-        double mean=98.7;
-
-
-
-
-        System.out.printf("이름 : 혜교");
-        System.out.println("");
-        System.out.printf("국어 : %2d",kor);
-        System.out.println("");
-        System.out.printf("영어 : %2d",eng);
-        System.out.println("");
-        System.out.printf("수학 : %2d",mat);
-        System.out.println("------------");
-        System.out.printf("총점 : %2d",sum);
-        System.out.println("");
-        System.out.printf("평균 : %2d",mean);
-
-
-    }
-}*/
