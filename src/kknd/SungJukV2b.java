@@ -59,7 +59,7 @@ public class SungJukV2b {
 
         //학점계산은 switch문으로 처리
         switch ((int)(mean/10)) {   /*<<<나누기 10을 하면 뒷숫자가 없어도 되고 앞에만*/
-            case 10 : grd ='수'; break;
+            case 10 :
             case 9 : grd ='수'; break;
             case 8 : grd ='우'; break;
             case 7 : grd ='미'; break;
@@ -76,7 +76,9 @@ public class SungJukV2b {
 
         //String.valueOf(값)
         //숫자를 문자로 변환
-        result = String.format(fmt, name, kor, eng, mat, sum, String.valueOf(mean), grd);
+        result = String.format(
+                fmt, name, kor, eng, mat,
+                sum, String.valueOf(mean), grd);
 
         /*mean = Double.parseDouble(String.format("%.1f", mean));*/
 
