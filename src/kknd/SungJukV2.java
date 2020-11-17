@@ -24,7 +24,7 @@ import java.util.Scanner;
 public class SungJukV2 {
     public static void main(String[] args) {
         //변수선언
-        Scanner scan = new Scanner(System.in);
+
         String name = "지현"; /*<<초기화*/
         int kor = 99;
         int eng = 98;
@@ -34,33 +34,35 @@ public class SungJukV2 {
         char grd = '가';
 
         //처리
-        System.out.print("점수를 입력해 주세요: ");
-        sum = scan.nextInt();
-        mean = (double)sum / 3;
+        //성적데이터를 키보드로 입력받기 위해
+        //scanner 클래스 초기화
+        Scanner sc = new Scanner(System.in);
 
+        System.out.print("이름을 입력하세요 : ");
+        name = sc.nextLine();
+        System.out.print("국어를 입력하세요 : ");
+        kor = sc.nextInt();
+        System.out.print("영어를 입력하세요 : ");
+        eng = sc.nextInt();
+        System.out.print("수학를 입력하세요 : ");
+        mat = sc.nextInt();
 
-        switch (sum) {
-            case 1 :
-                if (mean <= 90){
-                    System.out.println("수");
-                }
-            case 2 :
-                if (mean >= 80) {
-                    System.out.println("우");
-                }
-            case 3 :
-                if (mean >= 70) {
-                    System.out.println("미");
-                }
-            case 4 :
-                if (mean >= 60) {
-                    System.out.println("양 , 가");
-                }
-            default:
-                System.out.println("없는 점수입니다.");
-                break;
+        sum = kor + eng + mat;
+        mean = sum / 3;
+
+        //학점계산은 switch문으로 처리
+        switch ((int)mean/10) {   /*<<<나누기 10을 하면 뒷숫자가 없어도 되고 앞에만*/
+            case 10 : grd ='수'; break;
+
+            case 9 : grd ='수'; break;
+
+            case 8 : grd ='우'; break;
+            case 7 : grd ='미'; break;
+            case 6 : grd ='양'; break;
+            default: grd = '가';
         }
-
+        // String.format(형식지정자 , 변수들)
+        mean = Double.parseDouble(String.format("%.1f", mean));
 
         //결과출력
         System.out.println("이름 :" + name);
@@ -70,6 +72,7 @@ public class SungJukV2 {
         System.out.println("--------------");
         System.out.println("총점 :" + sum);
         System.out.println("평균 :" + mean);
+        //System.out.printf("평균 : %.1f\n" , mean);
         System.out.println("학점 :" + grd);
     }
 }
