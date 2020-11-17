@@ -35,7 +35,7 @@ public class SungJukV2b {
         int sum = 0;
         double mean = 0.0;
         char grd = '가';
-        String fmt = "이름 : %s\n국어 : %d\n영어 : %d\n수학 : %d\n총점 : %d\n평균 : %f\n학점 : %c";
+        String fmt = "이름 : %s\n국어 : %d\n영어 : %d\n수학 : %d\n총점 : %d\n평균 : %s\n학점 : %c";
 
         String result;
 
@@ -55,7 +55,7 @@ public class SungJukV2b {
         mat = sc.nextInt();
 
         sum = kor + eng + mat;
-        mean = sum / 3;
+        mean = (double)sum / 3;
 
         //학점계산은 switch문으로 처리
         switch ((int)(mean/10)) {   /*<<<나누기 10을 하면 뒷숫자가 없어도 되고 앞에만*/
@@ -73,7 +73,10 @@ public class SungJukV2b {
         // 9876543 / 100 => 98765.43
         mean = Math.round(mean * 100) / 100.0;
 
-        result = String.format(fmt, name, kor, eng, mat, sum, mean, grd);
+
+        //String.valueOf(값)
+        //숫자를 문자로 변환
+        result = String.format(fmt, name, kor, eng, mat, sum, String.valueOf(mean), grd);
 
         /*mean = Double.parseDouble(String.format("%.1f", mean));*/
 
