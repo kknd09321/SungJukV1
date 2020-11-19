@@ -4,7 +4,7 @@ package kknd;
 import java.util.Scanner;
 
 /**
- * 파일명 : SungJukV2
+ * 파일명 : SungJukV3
  * 작성일 : 2020.11.17
  *
  * 프로그램설명 : 성적처리프로그램 v3
@@ -87,7 +87,7 @@ public class SungJukV3 {
         }
 
 
-            //결과출력
+        //결과출력
         for (int i = 0; i < 3; i++){
             System.out.printf(fmt, name[i], kor[i], eng[i], mat[i], sum[i], mean[i], grd[i]);
         }
