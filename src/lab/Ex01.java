@@ -1,7 +1,5 @@
 package lab;
 
-import com.sun.org.apache.xpath.internal.operations.String;
-
 public class Ex01 {
     public static void main(String[] args){
         // 학생 클래스를 이용해서 객체 생성
@@ -12,6 +10,12 @@ public class Ex01 {
         Subject subj = new Subject();
         // 교수 클래스를 이용해서 객체 생성
         Professor prof = new Professor();
+
+        // 기본생성자로 만든 객체 내용 출력
+        System.out.println(std.name);
+        System.out.println(dept.dname);
+        System.out.println(subj.no);
+        System.out.println(prof.no);
 
         // 각 객체의 변수에 값 대입
 
@@ -40,6 +44,10 @@ public class Ex01 {
         prof.name = "이순신";
         prof.mjfield = "프로그래밍";
 
+        // 매개변수를 사용하는 생성자로 객체 생성
+        Student yoo = new Student(201252110, "전지현", "경기도의정부시",
+                "1986.4.30", "의상디자인", "445");
+
         // 객체에 저장된 값 출력력
         // 학생
         System.out.println(std.stdno);
@@ -57,9 +65,6 @@ public class Ex01 {
         // 과목
         // 교수
 
-
     }
 }
-
-
 

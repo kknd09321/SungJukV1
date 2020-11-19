@@ -25,12 +25,23 @@ public class OOP {
         Person lee = new Person();
         Person kim = new Person();
 
+        // 기본 생성자로 초기화된 변수 확인
+        System.out.println(choi.name);
+        System.out.println(lee.name);
+        System.out.println(kim.name);
+
+
         // 객체의 변수(멤버변수)에 값 대입
+        // 각 변수별로 값을 대입하는 것은 다소 불편
+        // => 생성자를 이용하면 좀 더 편하게 값을 대입할 수 있음
         choi.name = "최승희";
         choi.job = "의사";
         choi.age = 45;
         choi.gender = "여";
         choi.blood = "A";
+
+        // 매개변수 생성자를 이용한 객체 생성 및 초기화
+        Person yoo = new Person("우열","프로그래머",30,"남","혈액형");
 
         lee.name = "이미녀";
         lee.job = "골프선수";
@@ -66,4 +77,32 @@ class Person {
     int age;
     String gender;
     String blood;
+
+    // 생성자 constructor
+    // 멤버변수에 값을 초기화시키는 특별한 메서드
+    // public 클래스명(매개변수)
+    //     변수초기화
+    // }
+
+    // 기본 생성자
+    public Person() {
+        name = "홍길동";
+        job = "의적";
+        age = 22;
+        gender = "남";
+        blood = "O";
+    }
+
+    // 매개변수를 사용하는 생성자
+    // 매개변수명과 멤버변수명이 같은 경우
+    // 변수가림 shadowing 현상 발생
+    // 클래스의 멤버변수임을 명확하게 표현하기 위해
+    // 변수명 앞에 this라는 키워드를 추가 작성
+    public Person(String name, String job, int age, String gender, String blood) {
+        this.name = name;
+        this.job = job;
+        this.age = age;
+        this.gender = gender;
+        this.blood = blood;
+    }
 }

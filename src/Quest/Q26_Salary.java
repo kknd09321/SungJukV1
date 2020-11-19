@@ -4,7 +4,7 @@
      가. 미혼인 경우 : 연봉 3000미만 - 10%,  연봉 3000이상 - 25%
      나. 결혼한 경우 : 연봉 6000미만 - 15%,  연봉 6000이상 - 35%*/
 
-package lab;
+package Quest;
 
 import java.util.Scanner;
 

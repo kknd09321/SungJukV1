@@ -5,7 +5,7 @@
 
         나. 현재 연도가 400으로 나눠 떨어짐*/
 
-package lab;
+package Quest;
 
 import java.util.Scanner;
 
