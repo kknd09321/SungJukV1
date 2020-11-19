@@ -4,43 +4,62 @@ import com.sun.org.apache.xpath.internal.operations.String;
 
 public class Ex01 {
     public static void main(String[] args){
-        Students kim = new Students();
-        Students song = new Students();
-        Students jeon = new Students();
-        Students su = new Students();
-        Students i = new Students();
-
-        kim.num = 201350050;
-        kim.name = "김태희";
-        kim.adr = "경기도고양시";
-        kim.major = "컴퓨터";
-        kim.pronum = 504;
-
-
-
         // 학생 클래스를 이용해서 객체 생성
+        Student std = new Student();
         // 학과 클래스를 이용해서 객체 생성
+        Department dept = new Department();
         // 과목 클래스를 이용해서 객체 생성
+        Subject subj = new Subject();
         // 교수 클래스를 이용해서 객체 생성
+        Professor prof = new Professor();
 
         // 각 객체의 변수에 값 대입
 
+        // 학생
+        std.stdno = 201350050;
+        std.name = "김태희";
+        std.addr = "경기도 고양시";
+        std.birth = "1985.3.22";
+        std.dept = "컴퓨터";
+        std.prof = "504";
+
+        // 학과
+        dept.dname = "컴퓨터공학";
+        dept.phone = "123-4567-8901";
+        dept.office = "E동 2층";
+        dept.chief = "504";
+
+        //과목
+        subj.no ="0205";
+        subj.subname ="프로그래밍";
+        subj.subjdesc = "자바프로그래밍";
+        subj.prof = "301";
+
+        //교수
+        prof.no = "301";
+        prof.name = "이순신";
+        prof.mjfield = "프로그래밍";
+
         // 객체에 저장된 값 출력력
+        // 학생
+        System.out.println(std.stdno);
+        System.out.println(std.name);
+        System.out.println(std.addr);
+        System.out.println(std.birth);
+        System.out.println(std.dept);
+        System.out.println(std.prof);
+
+        // 학과
+        System.out.println(dept.dname);
+        System.out.println(dept.phone);
+        System.out.println(dept.office);
+        System.out.println(dept.chief);
+        // 과목
+        // 교수
+
 
     }
 }
-class Students {
-    int num;
-    java.lang.String name;
-    java.lang.String adr;
-    int birth;
-    java.lang.String major;
-    int pronum;
-}
 
-class Major{
-    String majorname;
-    int callnum;
-    java.lang.String location;
-    java.lang.String classnum;
-}
+
+
