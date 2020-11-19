@@ -4,7 +4,7 @@ package kknd;
 import java.util.Scanner;
 
 /**
- * 파일명 : SungJukV2
+ * 파일명 : SungJukV2b
  * 작성일 : 2020.11.17
  *
  * 프로그램설명 : 성적처리프로그램 v2b
