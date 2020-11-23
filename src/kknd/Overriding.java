@@ -9,8 +9,10 @@ public class Overriding {
     public static void main(String[] args) {
         Cat crycat = new Cat();
         Dog crydog = new Dog();
+        Animal a = new Animal();//부모클래스 객체화
         System.out.println(crycat.cry());
         System.out.println(crydog.cry());
+        System.out.println(a.cry());
     }
 }
 
